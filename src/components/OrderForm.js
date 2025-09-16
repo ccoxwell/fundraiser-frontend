@@ -17,7 +17,7 @@ const OrderForm = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await axios.get('/api/products');
+      const response = await axios.get('https://fundraiser-backend-uyse.onrender.com/api/products');
       setProducts(response.data);
       setLoading(false);
     } catch (error) {
@@ -86,7 +86,7 @@ const OrderForm = () => {
         items: items
       };
 
-      await axios.post('/api/orderproducts', orderData);
+      await axios.post('https://fundraiser-backend-uyse.onrender.com/api/orderproducts', orderData);
       
       setMessage({ 
         type: 'success', 

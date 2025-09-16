@@ -14,7 +14,7 @@ const Dashboard = () => {
   const fetchDashboardData = async () => {
     try {
       const [ordersResponse] = await Promise.all([
-        axios.get('/api/orders')
+        axios.get('https://fundraiser-backend-uyse.onrender.com/api/orders')
       ]);
       
     //   setStats(statsResponse.data);
